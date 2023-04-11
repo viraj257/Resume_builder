@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>UploadCV</title>
+</head>
+<body>
+    <div class="container">
+    <input type="file" class="inpFile" id="inpFile" hidden/>
+    <label for="inpFile">Choose File</label>
+
+    <button type="button" class="btnUpload" id="btnUpload">Upload</button>
+    <br>
+    <br>
+    <textarea style="width: 500px; height: 500px;" id="resultText" placeholder="Your PDF text will appear here" ></textarea>
+    
+    <script href="index.js">
+    const inpFile = document.getElementById("inpFile");
+    const btnUpload = document.getElementById("btnUpload");
+    const resultText = document.getElementById("resultText");
+
+    btnUpload.addEventListener("click", () => {
+            const formData = new FormData();
+
+            formData.append("pdfFile", inpFile.files[0]);
+
+            fetch("/extract-text", {
+            method: "post",
+            body: formData,
+
+
+            }).then(response => {
+            return response.text();
+
+            }).then(extractedText =>{
+            resultText.value = extractedText;
+            });
+    });
+    </script>
+    </div>
+    </body>
+</html>
