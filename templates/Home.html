@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <nav class=" navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ResumeBuilder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" style="color: white;">Search</button>
+                    <button onclick="window.location.href='login' ;"  class="btn btn-outline-success" type="button" style="color: white;">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="middleArea">
+        <div class="middleAreaLeft">
+            <h1 class="my-3">Welcome to Resume Builder</h1>
+            <p class="my-2 mx-1">Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and easy to use, with a range
+            of amazing functions. Custom-tailor resumes for any job within minutes. Increase your interview chances and rise above
+            the competition.</p>
+        </div>
+        <div class="middleAreaRight">
+            <div id="carouselExampleControls" style="border-radius: 9px;" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../static/img/resume1.jpg" class="d-block w-100 caroImage" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/img/resume2.jpg" class="d-block w-100 caroImage" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/img/resume4.jpg" class="d-block w-100 caroImage" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="headPortion my-3">
+        <h3 class="animate-charcter">RESUME BUILDER</h3>
+    </div>
+    <div class="middleArrow">
+        <div></div>
+        <div class="leftBox"></div>
+        <div class="rightBox"></div>
+        <div></div>
+    </div>
+    <div class="inputButtons">
+        <div class="uploadCV">
+            <input onClick="window.location.href = 'question' ;"  type="button" class="inputBtn" value="Question">
+        </div>
+        x
+        <div class="enterDetails">
+            <input onClick="window.location.href = 'resume' ;" type="button" class="inputBtn" value="Resume">
+        </div>
+    </div>
+        <div class="inputButtons">
+            <div class="uploadCV">
+                <p>Questionarie for Recommendations</p>
+            </div>
+            
+            <div class="enterDetails">
+                <p>Create a New Resume </p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+        <script src="static\javascript\script.js"></script>
+</body>
+</html>
